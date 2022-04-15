@@ -1,0 +1,14 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.calculator__rightside {
+  background-color: #00494d;
+}
+/*# sourceMappingURL=style.css.map */
