@@ -21,10 +21,22 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 24px;
+  letter-spacing: 9px;
+  margin-left: 9px;
+  margin-top: 19px;
+  color: #5e7a7d;
 }
 
 .calculator {
-  background-color: white;
+  background-color: red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -55,6 +67,14 @@ main {
   width: 49%;
 }
 
+.calculator__rightside .output__container:nth-child(1) {
+  margin-top: 1rem;
+}
+
+.calculator__rightside .output__container:nth-child(2) {
+  margin-top: 2.5rem;
+}
+
 .output__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -62,5 +82,42 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.description p {
+  color: white;
+  margin: 0;
+}
+
+.description .per-person {
+  color: #7f9c9f;
+}
+
+.output {
+  font-size: 32px;
+  color: #26c0ab;
+}
+
+#reset__btn {
+  background-color: #26c0ab;
+  color: #00494d;
+  font-family: inherit;
+  font-size: 18px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0.2rem;
+  margin-top: 10rem;
+  width: 100%;
+  padding: 8px 0;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+#reset__btn:hover, #reset__btn:active {
+  background-color: #c5e4e7;
 }
 /*# sourceMappingURL=style.css.map */
