@@ -43,10 +43,12 @@ h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 2rem;
-  padding: 2.5rem 2rem;
-  border-radius: 1rem;
-  width: 60%;
+  gap: 1rem;
+  padding: 2.5rem 2rem 1.5rem;
+  border-radius: 1.5rem;
+  width: 60.5%;
+  position: relative;
+  top: 56px;
 }
 
 .calculator__leftside {
@@ -63,8 +65,11 @@ h1 {
 .calculator__rightside {
   background-color: #00494d;
   padding: 2rem 3rem;
-  border-radius: 0.5rem;
-  width: 49%;
+  border-radius: 1rem;
+  width: 48.3%;
+  position: relative;
+  left: 17px;
+  bottom: 9px;
 }
 
 .calculator__rightside .output__container:nth-child(1) {
@@ -97,7 +102,7 @@ h1 {
 }
 
 .output {
-  font-size: 32px;
+  font-size: 48px;
   color: #26c0ab;
 }
 
@@ -109,7 +114,7 @@ h1 {
   text-transform: uppercase;
   border: none;
   border-radius: 0.2rem;
-  margin-top: 10rem;
+  margin-top: 9rem;
   width: 100%;
   padding: 8px 0;
   cursor: pointer;
