@@ -34,8 +34,8 @@ h1 {
 }
 
 .calculator {
-   // background-color: $white;
-   background-color: red;
+   background-color: $white;
+  // background-color: red;
     display: flex;
     justify-content: center;
     gap: 1rem;
@@ -50,6 +50,42 @@ h1 {
     display: flex;
     flex-direction: column;
     width: 46%;
+
+    label {
+        color: $grayish-cyan;
+        margin: 12px 0;
+
+        .people__label {
+            margin-top: 2rem;
+        }
+    }
+}
+
+.calculator__field {
+    background-color: $very-light-grayish-cyan;
+    border: none;
+    border-radius: 0.2rem;
+    font-size: 24px;
+    font-family: inherit;
+    text-align: right;
+    margin-bottom: 1rem;
+
+    &:focus {
+        outline-color: $strong-cyan;
+    }
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.radio-group {
+
+    input {
+        background-color: $very-dark-cyan;
+    }
 }
 
 .calculator__rightside {
@@ -77,6 +113,7 @@ h1 {
 }
 
 .description {
+    font-size: 15px;
 
     p {
         color: $white;
@@ -85,6 +122,7 @@ h1 {
 
     .per-person {
         color: $grayish-cyan;
+        font-size: 13px;
     }
 }
 

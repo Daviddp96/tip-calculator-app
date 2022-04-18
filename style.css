@@ -36,7 +36,7 @@ h1 {
 }
 
 .calculator {
-  background-color: red;
+  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -60,6 +60,39 @@ h1 {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 46%;
+}
+
+.calculator__leftside label {
+  color: #7f9c9f;
+  margin: 12px 0;
+}
+
+.calculator__leftside label .people__label {
+  margin-top: 2rem;
+}
+
+.calculator__field {
+  background-color: #f4fafa;
+  border: none;
+  border-radius: 0.2rem;
+  font-size: 24px;
+  font-family: inherit;
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+.calculator__field:focus {
+  outline-color: #26c0ab;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.radio-group input {
+  background-color: #00494d;
 }
 
 .calculator__rightside {
@@ -92,6 +125,10 @@ h1 {
           justify-content: space-between;
 }
 
+.description {
+  font-size: 15px;
+}
+
 .description p {
   color: white;
   margin: 0;
@@ -99,6 +136,7 @@ h1 {
 
 .description .per-person {
   color: #7f9c9f;
+  font-size: 13px;
 }
 
 .output {
