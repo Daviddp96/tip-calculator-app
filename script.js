@@ -47,8 +47,9 @@ tipsBtns.forEach(btn => {
     btn.addEventListener('click', function selectTip() {
         tipValue = parseFloat(btn.textContent.trim())/100;
         console.log(tipValue);
+        calc();
     })
-    calc();
+    
 });
 
 function calc() {
