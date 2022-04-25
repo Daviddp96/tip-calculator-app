@@ -16,7 +16,7 @@
     <form action="#" class="calculator">
       <div class="calculator__leftside">
         <label for="bill" class="bill__label">Bill</label>
-        <input type="number" value="142.55" id="bill__field" class="calculator__field">
+        <input type="number" id="bill__field" class="calculator__field">
         <label for="tip-percentage" class="percentage__label">Select Tip %</label>
         <div class="percentages-group">
           <div class="row">
@@ -46,7 +46,7 @@
           </div>
         </div>
         <label for="people" class="people__label">Number of People</label>
-        <input type="number" value="5" id="people__field" class="calculator__field">
+        <input type="number" id="people__field" class="calculator__field">
       </div>
       <div class="calculator__rightside">
         <div class="output__container">
@@ -54,14 +54,14 @@
             <p>Tip Amount</p>
             <p class="per-person">/ person</p>
           </div>
-          <div class="output">$0.00</div>
+          <div class="output" id="tip-output">$4.27</div>
         </div>
         <div class="output__container">
           <div class="description">
             <p>Total</p>
             <p class="per-person">/ person</p>
           </div>
-          <div class="output">$0.00</div>
+          <div class="output" id="total-output">$32.79</div>
         </div>
         <input type="reset" id="reset__btn">
       </div>

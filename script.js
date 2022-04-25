@@ -3,6 +3,9 @@ const tipsBtns = document.querySelectorAll('label[class=percentage][for]');
 const tipsRadios = document.querySelectorAll('input[type=radio]')
 const custom = document.getElementById('customPercent');
 const people = document.getElementById('people__field');
+const tipOutput = document.getElementById('tip-output');
+const totalOutput = document.getElementById('total-output');
+
 
 let billValue = 0.0;
 let tipValue = 0.15;
@@ -16,6 +19,7 @@ people.addEventListener('input', setPeopleValue);
 function setBillValue() {
     billValue = parseFloat(bill.value);
     console.log(billValue)
+    calc();
 }
 
 function setCustomTip() {
@@ -26,6 +30,7 @@ function setCustomTip() {
     });
     tipValue = parseFloat(custom.value);
     console.log(tipValue);
+    calc();
 }
 
 function setPeopleValue() {
@@ -35,6 +40,7 @@ function setPeopleValue() {
         //set all output to 0
     }
     console.log(peopleValue)
+    calc();
 }
 
 tipsBtns.forEach(btn => {
@@ -42,12 +48,17 @@ tipsBtns.forEach(btn => {
         tipValue = parseFloat(btn.textContent.trim())/100;
         console.log(tipValue);
     })
+    calc();
 });
 
 function calc() {
     let tipPerPerson = billValue * tipValue / peopleValue;
     let billPerPerson = billValue / peopleValue + tipPerPerson;
+
+    tipOutput.innerHTML = (Math.floor(tipPerPerson * 100) / 100).toFixed(2);
+    totalOutput.innerHTML = (Math.round(billPerPerson * 100) / 100).toFixed(2);
 }
+
 
 // 1. Get the Bill
     //  1.1 Make sure Bill doesn't include dashes or symbols that aren't numbers. 
