@@ -18,13 +18,32 @@
         <label for="bill" class="bill__label">Bill</label>
         <input type="number" value="142.55" id="bill__field" class="calculator__field">
         <label for="tip-percentage" class="percentage__label">Select Tip %</label>
-        <div class="radio-group">
-          <input type="radio" name="tip-percentage" id="fivePercent">
-          <input type="radio" name="tip-percentage" id="tenPercent" checked>
-          <input type="radio" name="tip-percentage" id="fifteenPercent">
-          <input type="radio" name="tip-percentage" id="twentyfivePercent">
-          <input type="radio" name="tip-percentage" id="fiftyPercent">
-          <input type="radio" name="tip-percentage" id="customPercent">
+        <div class="percentages-group">
+          <div class="row">
+            <input type="radio" name="tip-percentage" id="fivePercent">
+            <label for="fivePercent" class="percentage">
+              <span class="percentageSpan">5%</span>
+            </label>
+            <input type="radio" name="tip-percentage" id="tenPercent">
+            <label for="tenPercent" class="percentage">
+              <span class="percentageSpan">10%</span>
+            </label>
+            <input type="radio" name="tip-percentage" id="fifteenPercent" checked>
+            <label for="fifteenPercent" class="percentage">
+              <span class="percentageSpan">15%</span>
+            </label>
+          </div>
+          <div class="row">
+            <input type="radio" name="tip-percentage" id="twentyfivePercent">
+            <label for="twentyfivePercent" class="percentage">
+              <span class="percentageSpan">25%</span>
+            </label>
+            <input type="radio" name="tip-percentage" id="fiftyPercent">
+            <label for="fiftyPercent" class="percentage">
+              <span class="percentageSpan">50%</span>
+            </label>
+            <input type="number" name="tip-percentage" id="customPercent" class="calculator__field" placeholder="Custom">
+          </div>
         </div>
         <label for="people" class="people__label">Number of People</label>
         <input type="number" value="5" id="people__field" class="calculator__field">
@@ -52,8 +71,10 @@
   <footer>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">David Delgado</a>.
+      Coded by <a href="https://github.com/Daviddp96
+      ">David Delgado</a>.
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>

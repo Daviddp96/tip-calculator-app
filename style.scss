@@ -69,6 +69,7 @@ h1 {
     font-family: inherit;
     text-align: right;
     margin-bottom: 1rem;
+    padding: 0.25rem 1rem 0.25rem;
 
     &:focus {
         outline-color: $strong-cyan;
@@ -81,11 +82,58 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0; 
 }
 
-.radio-group {
+.percentages-group {
 
-    input {
-        background-color: $very-dark-cyan;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.3rem;
+}
+
+.percentage {
+    background-color: $very-dark-cyan;
+    padding: 0.3rem 0;
+    font-size: 24px;
+    width: 32.5%;
+    text-align: center;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    span {
+        color: $white;
     }
+
+    &:hover {
+        background-color: $light-grayish-cyan;
+        span {
+            color: $very-dark-cyan;
+        }
+    }
+
+}
+
+input[type=radio] {
+    position: absolute;
+    appearance: none;
+
+    &:checked + label {
+        background-color: $strong-cyan;
+        span {
+            color: $very-dark-cyan;
+        }
+
+    }
+
+}
+
+#customPercent {
+    margin-bottom: 0;
+    width: 32.5%;
+
 }
 
 .calculator__rightside {
@@ -148,5 +196,28 @@ input[type=number]::-webkit-outer-spin-button {
     &:hover,
     &:active {
         background-color: $light-grayish-cyan;
+    }
+}
+
+
+
+footer {
+    padding: 1rem 0;
+    margin: 1rem 0;
+    text-align: center;
+
+
+    .attribution {
+        color: $white;
+        
+        a {
+            color: $very-dark-cyan;
+            text-decoration: none;
+            transition: all 0.2s ease;
+
+            &:hover {
+                color: $strong-cyan;
+            }
+        }
     }
 }

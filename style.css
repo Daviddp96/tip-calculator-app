@@ -79,6 +79,7 @@ h1 {
   font-family: inherit;
   text-align: right;
   margin-bottom: 1rem;
+  padding: 0.25rem 1rem 0.25rem;
 }
 
 .calculator__field:focus {
@@ -91,8 +92,61 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-.radio-group input {
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.3rem;
+}
+
+.percentage {
   background-color: #00494d;
+  padding: 0.3rem 0;
+  font-size: 24px;
+  width: 32.5%;
+  text-align: center;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.percentage span {
+  color: white;
+}
+
+.percentage:hover {
+  background-color: #c5e4e7;
+}
+
+.percentage:hover span {
+  color: #00494d;
+}
+
+input[type=radio] {
+  position: absolute;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+input[type=radio]:checked + label {
+  background-color: #26c0ab;
+}
+
+input[type=radio]:checked + label span {
+  color: #00494d;
+}
+
+#customPercent {
+  margin-bottom: 0;
+  width: 32.5%;
 }
 
 .calculator__rightside {
@@ -162,5 +216,26 @@ input[type=number]::-webkit-outer-spin-button {
 
 #reset__btn:hover, #reset__btn:active {
   background-color: #c5e4e7;
+}
+
+footer {
+  padding: 1rem 0;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+footer .attribution {
+  color: white;
+}
+
+footer .attribution a {
+  color: #00494d;
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+footer .attribution a:hover {
+  color: #26c0ab;
 }
 /*# sourceMappingURL=style.css.map */
