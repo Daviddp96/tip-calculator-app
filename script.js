@@ -8,9 +8,9 @@ const totalOutput = document.getElementById('total-output');
 
 
 let billValue = 0.0;
-let tipValue = 0.15;
+let tipValue = 0.0;
 let customValue = 0.0;
-let peopleValue = 5;
+let peopleValue = 0;
 
 bill.addEventListener('input', setBillValue);
 custom.addEventListener('input', setCustomTip);
@@ -53,11 +53,15 @@ tipsBtns.forEach(btn => {
 });
 
 function calc() {
-    let tipPerPerson = billValue * tipValue / peopleValue;
-    let billPerPerson = billValue / peopleValue + tipPerPerson;
-
-    tipOutput.innerHTML = (Math.floor(tipPerPerson * 100) / 100).toFixed(2);
-    totalOutput.innerHTML = (Math.round(billPerPerson * 100) / 100).toFixed(2);
+    if (peopleValue > 0) {
+        let tipPerPerson = billValue * tipValue / peopleValue;
+        let billPerPerson = billValue / peopleValue + tipPerPerson;
+        tipOutput.innerHTML = "$" + (Math.floor(tipPerPerson * 100) / 100).toFixed(2);
+        totalOutput.innerHTML = "$" + (Math.round(billPerPerson * 100) / 100).toFixed(2);
+    } else {
+        tipOutput.innerHTML = "$0.00";
+        totalOutput.innerHTML = "$0.00";
+    }
 }
 
 
