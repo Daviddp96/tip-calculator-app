@@ -5,6 +5,8 @@ const custom = document.getElementById('customPercent');
 const people = document.getElementById('people__field');
 const tipOutput = document.getElementById('tip-output');
 const totalOutput = document.getElementById('total-output');
+const errorMessage = document.querySelector('.error-message');
+const resetButton = document.getElementById("reset__btn");
 
 
 let billValue = 0.0;
@@ -28,7 +30,10 @@ function setCustomTip() {
             btn.checked = false;
         }
     });
-    tipValue = parseFloat(custom.value);
+    if(custom.value == null) {
+        return;
+    }
+    tipValue = parseFloat(custom.value) / 100;
     console.log(tipValue);
     calc();
 }
@@ -36,11 +41,15 @@ function setCustomTip() {
 function setPeopleValue() {
     peopleValue = parseFloat(people.value);
     if(peopleValue == 0) {
-        //display error
-        //set all output to 0
+        console.log('error');
+        errorMessage.style.display = 'block';
+        people.classList.add('error');
+    } else {
+        errorMessage.style.display = 'none';
+        people.classList.remove('error');
+        console.log(peopleValue)
+        calc();
     }
-    console.log(peopleValue)
-    calc();
 }
 
 tipsBtns.forEach(btn => {

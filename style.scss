@@ -62,8 +62,9 @@ h1 {
 }
 
 .calculator__field {
+    color: $very-dark-cyan;
     background-color: $very-light-grayish-cyan;
-    border: none;
+    border-color: transparent;
     border-radius: 0.2rem;
     font-size: 24px;
     font-family: inherit;
@@ -80,10 +81,6 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
   margin: 0; 
-}
-
-.percentages-group {
-
 }
 
 .row {
@@ -172,6 +169,16 @@ input[type=radio] {
         color: $grayish-cyan;
         font-size: 13px;
     }
+}
+
+.error-message {
+    color: #f05138;
+    display: none;
+}
+
+.error {
+    border: 2px solid #f05138;
+    outline-color: #f05138 !important;
 }
 
 .output {

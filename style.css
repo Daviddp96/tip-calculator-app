@@ -72,8 +72,9 @@ h1 {
 }
 
 .calculator__field {
+  color: #00494d;
   background-color: #f4fafa;
-  border: none;
+  border-color: transparent;
   border-radius: 0.2rem;
   font-size: 24px;
   font-family: inherit;
@@ -191,6 +192,16 @@ input[type=radio]:checked + label span {
 .description .per-person {
   color: #7f9c9f;
   font-size: 13px;
+}
+
+.error-message {
+  color: #f05138;
+  display: none;
+}
+
+.error {
+  border: 2px solid #f05138;
+  outline-color: #f05138 !important;
 }
 
 .output {
