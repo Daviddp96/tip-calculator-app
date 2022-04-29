@@ -17,8 +17,13 @@ let peopleValue = 0;
 bill.addEventListener('input', setBillValue);
 custom.addEventListener('input', setCustomTip);
 people.addEventListener('input', setPeopleValue);
+resetButton.addEventListener('click', disableButton);
+
+function disableButton() {
+}
 
 function setBillValue() {
+    resetButton.removeAttribute('disabled');
     billValue = parseFloat(bill.value);
     console.log(billValue)
     calc();
