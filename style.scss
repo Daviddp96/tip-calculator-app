@@ -23,6 +23,7 @@ main {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    padding-top: 127px;
 }
 
 h1 {
@@ -73,6 +74,7 @@ h1 {
     text-align: right;
     margin-bottom: 1rem;
     padding: 0.25rem 1rem 0.25rem;
+    width: 100%;
 
     &:focus {
         outline-color: $strong-cyan;
@@ -185,6 +187,8 @@ input[type=radio] {
 }
 
 .output {
+    overflow-x: hidden;
+    max-width: 222px;
     font-size: 48px;
     color: $strong-cyan;
 }
@@ -219,7 +223,7 @@ input[type=radio] {
 
 footer {
     padding: 1rem 0;
-    margin: 1rem 0;
+    margin: 4rem 0;
     text-align: center;
 
 
@@ -238,10 +242,36 @@ footer {
     }
 }
 
+.field-container {
+    position: relative;
+    width: 100%;
+}
+
+.dollar,
+.peoplesign {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
 @media (max-width: 800px) {
+
     .calculator {
+        height: auto;
         width: 100%;
         flex-direction: column;
         align-items: center;
     }
+
+    .calculator__leftside,
+    .calculator__rightside {
+        width: 100%;
+        left: 0;
+    }
+
+    footer {
+        margin-top: 5rem;
+        width: 90%;
+        text-align: center;
+    }   
 }

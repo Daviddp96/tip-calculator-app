@@ -25,6 +25,7 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   min-height: 100vh;
+  padding-top: 127px;
 }
 
 h1 {
@@ -83,6 +84,7 @@ h1 {
   text-align: right;
   margin-bottom: 1rem;
   padding: 0.25rem 1rem 0.25rem;
+  width: 100%;
 }
 
 .calculator__field:focus {
@@ -208,6 +210,8 @@ input[type=radio]:checked + label span {
 }
 
 .output {
+  overflow-x: hidden;
+  max-width: 222px;
   font-size: 48px;
   color: #26c0ab;
 }
@@ -240,7 +244,7 @@ input[type=radio]:checked + label span {
 
 footer {
   padding: 1rem 0;
-  margin: 1rem 0;
+  margin: 4rem 0;
   text-align: center;
 }
 
@@ -259,8 +263,21 @@ footer .attribution a:hover {
   color: #26c0ab;
 }
 
+.field-container {
+  position: relative;
+  width: 100%;
+}
+
+.dollar,
+.peoplesign {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
 @media (max-width: 800px) {
   .calculator {
+    height: auto;
     width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -269,6 +286,16 @@ footer .attribution a:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .calculator__leftside,
+  .calculator__rightside {
+    width: 100%;
+    left: 0;
+  }
+  footer {
+    margin-top: 5rem;
+    width: 90%;
+    text-align: center;
   }
 }
 /*# sourceMappingURL=style.css.map */

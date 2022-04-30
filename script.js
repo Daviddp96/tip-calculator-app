@@ -77,7 +77,7 @@ tipsBtns.forEach(btn => {
 });
 
 function calc() {
-    if (peopleValue > 0 && custom.value != undefined) {
+    if (peopleValue > 0 && billValue > 0) {
         let tipPerPerson = billValue * tipValue / peopleValue;
         let billPerPerson = billValue / peopleValue + tipPerPerson;
         tipOutput.innerHTML = "$" + (Math.floor(tipPerPerson * 100) / 100).toFixed(2);
@@ -108,3 +108,4 @@ function calc() {
 // PERCENTAGE CAN'T BE NEGATIVE
 // BILL CAN'T BE NEGATIVE
 // PEOPLE CAN'T BE NEGATIVE
+// CUSTOM TIP CAN'T BE NEGATIVE
