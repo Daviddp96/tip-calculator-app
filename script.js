@@ -20,6 +20,16 @@ people.addEventListener('input', setPeopleValue);
 resetButton.addEventListener('click', disableButton);
 
 function disableButton() {
+    tipOutput.innerHTML = "$0.00";
+    totalOutput.innerHTML = "$0.00";
+    bill.value = "";
+    people.value = "";
+    tipsRadios.forEach(btn => {
+        if(btn.checked == true) {
+            btn.checked = false;
+        }
+    });
+    resetButton.setAttribute('disabled', "");
 }
 
 function setBillValue() {
@@ -67,7 +77,7 @@ tipsBtns.forEach(btn => {
 });
 
 function calc() {
-    if (peopleValue > 0) {
+    if (peopleValue > 0 && custom.value != undefined) {
         let tipPerPerson = billValue * tipValue / peopleValue;
         let billPerPerson = billValue / peopleValue + tipPerPerson;
         tipOutput.innerHTML = "$" + (Math.floor(tipPerPerson * 100) / 100).toFixed(2);
